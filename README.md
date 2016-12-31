@@ -10,7 +10,9 @@ T.C. Merkez Bankası tarafından yayınlanan döviz kurlarını almak için yaz�
 - TCMB sitesinde yayınlanan tüm kur tipleri için kullanabilirsiniz. Bunlar: Döviz alış, Döviz satış, Efektik alış ve Efektik satış'dır.
 
 ## Nasıl Kullanılır ?
-Projeyi indirdiğinizde "TRYExchRate/src/TRYExchRate/TRYExchRate.cs" adresinde yer alan sınıfı kendi projenize dahil ettikten sonra aşağıdaki gibi çalıştırabilirsiniz.
+Projenin içinde kur sınıfı ve bu sınıfı kullanan örnek console application projesi bulunuyor.
+
+"src/TRYExchRate/TRYExchRate.cs" adresinde yer alan sınıfı kendi projenize dahil ettikten sonra aşağıdaki gibi çalıştırabilirsiniz.
 
 ```cs
 TRYExchRate helper = new TRYExchRate(new DateTime(2016,12,30));
@@ -23,8 +25,6 @@ decimal usdExhRate = helper.GetExchRate("USD", ExchRateType.ForexBuying);
 - Bu aşamadan sonra "GetExchRate" method'u ile para birimi ve kur tipi belirterek çekilen kurları okuyabilirsiniz.
 
 ## Örnek
-Projenin içinde sınıfın detaylı kullanımının gösterildiği örnek "Console Application" projesi bulunuyor. İndirdiğiniz projeyi visual studio ile açıp direkt run edebilirsiniz.
-
-Örnek projenin çıktısı:
+İndirdiğiniz örnek projeyi visual studio ile açıp direkt run edebilirsiniz. Run ettiğinizde aşağıdaki gibi bir çıktı alacaksınız:
 
 ![sample](http://guvensahin.com/wp-content/uploads/2017/01/TRYExchRateSample.png)
