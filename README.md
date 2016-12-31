@@ -13,19 +13,18 @@ T.C. Merkez Bankası tarafından yayınlanan döviz kurlarını almak için yaz�
 Projeyi indirdiğinizde "TRYExchRate/src/TRYExchRate/TRYExchRate.cs" adresinde yer alan sınıfı kendi projenize dahil ettikten sonra aşağıdaki gibi çalıştırabilirsiniz.
 
 ```
-var exchRateHelper = new TRYExchRate(DateTime.Now);
+TRYExchRate helper = new TRYExchRate(new DateTime(2016,12,30));
+helper.LoadExchRate();
 
-// bu aşamada tcmb den belirttiğiniz tarih için kur çekilir.
-// ilgili tarih'e ait bütün para birimlerini ve kur tiplerini çekip, sınıf içinde saklar.
-decimal usdExhRate = exchRateHelper.GetExchRate("USD", ExchRateType.ForexBuying);
-
-// aynı instance ile farklı işlem yaptığınızda kuru tekrar çekmeye gerek yoktur. bu sebeple önceden kaydettiğini okur.
-decimal eurExhRate = exchRateHelper.GetExchRate("EUR", ExchRateType.ForexSelling);
+decimal usdExhRate = helper.GetExchRate("USD", ExchRateType.ForexBuying);
 ```
+
+- "LoadExchRate" method'u çalıştığında TCMB'nin sitesinden ilgili tarihe ait tüm kurlar çekilir ve sınıfın içine kaydedilir.
+- Bu aşamadan sonra "GetExchRate" method'u ile para birimi ve kur tipi belirterek çekilen kurları okuyabilirsiniz.
 
 ## Örnek
 Projenin içinde sınıfın detaylı kullanımının gösterildiği örnek "Console Application" projesi bulunuyor. İndirdiğiniz projeyi visual studio ile açıp direkt run edebilirsiniz.
 
-Örnek ekran görüntüsü:
+Örnek projenin çıktısı:
 
-![sample](http://guvensahin.com/wp-content/uploads/2016/12/TRYExchRateSample.png)
+![sample](http://guvensahin.com/wp-content/uploads/2017/01/TRYExchRateSample.png)
