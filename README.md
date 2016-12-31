@@ -28,5 +28,6 @@ decimal usdExhRate = helper.GetExchRate("USD", ExchRateType.ForexBuying);
 
 
 ## Örnek
-İndirdiğiniz örnek projeyi visual studio ile açıp direkt run edebilirsiniz. Run ettiğinizde aşağıdaki gibi bir çıktı alacaksınız:
+İndirdiğiniz örnek console application projesini visual studio ile açıp direkt run edebilirsiniz. Run ettiğinizde aşağıdaki gibi bir çıktı alacaksınız:
 
+![sample](http://guvensahin.com/wp-content/uploads/2017/01/TRYExchRateSample.png)
