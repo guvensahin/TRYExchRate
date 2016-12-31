@@ -9,27 +9,27 @@ namespace TRYExchRate
     {
         static void Main(string[] args)
         {
-            var exchRateHelper = new TRYExchRate(DateTime.Now);
+            TRYExchRate helper = new TRYExchRate(DateTime.Now);
+            helper.LoadExchRate();
 
-            decimal test = exchRateHelper.GetExchRate("USD", ExchRateType.ForexBuying);
-
-
-            Console.Write(exchRateHelper.CurrencyDate);
+            Console.Write("İstenilen kur tarihi: " + helper.CurrencyDate);
             Console.WriteLine("");
+            Console.Write("Alınan kur tarihi: " + helper.ActualCurrencyDate);
+            Console.WriteLine("");
+            Console.WriteLine("Api linki: " + helper.ApiUrl);
             Console.WriteLine("");
 
             // USD
-            Console.WriteLine("USD");
-            Console.WriteLine("Forex Buying: " + exchRateHelper.GetExchRate("USD", ExchRateType.ForexBuying).ToString());
-            Console.WriteLine("Forex Selling: " + exchRateHelper.GetExchRate("USD", ExchRateType.ForexSelling).ToString());
-            Console.WriteLine("Banknote Buying: " + exchRateHelper.GetExchRate("USD", ExchRateType.BanknoteBuying).ToString());
-            Console.WriteLine("Banknote Selling: " + exchRateHelper.GetExchRate("USD", ExchRateType.BanknoteSelling).ToString());
+            Console.WriteLine("USD - Döviz Alış: " + helper.GetExchRate("USD", ExchRateType.ForexBuying).ToString());
+            Console.WriteLine("USD - Döviz Satış: " + helper.GetExchRate("USD", ExchRateType.ForexSelling).ToString());
+            Console.WriteLine("USD - Efektif Alış: " + helper.GetExchRate("USD", ExchRateType.BanknoteBuying).ToString());
+            Console.WriteLine("USD - Efektif Satış: " + helper.GetExchRate("USD", ExchRateType.BanknoteSelling).ToString());
             Console.WriteLine("");
 
-            // Other
-            Console.WriteLine("EUR - Forex Buying: " + exchRateHelper.GetExchRate("EUR", ExchRateType.ForexBuying).ToString());
-            Console.WriteLine("GBP - Forex Buying: " + exchRateHelper.GetExchRate("GBP", ExchRateType.ForexBuying).ToString());
-            Console.WriteLine("CAD - Forex Buying: " + exchRateHelper.GetExchRate("CAD", ExchRateType.ForexBuying).ToString());
+            // diğer para birimleri
+            Console.WriteLine("EUR - Döviz Alış: " + helper.GetExchRate("EUR", ExchRateType.ForexBuying).ToString());
+            Console.WriteLine("GBP - Döviz Alış: " + helper.GetExchRate("GBP", ExchRateType.ForexBuying).ToString());
+            Console.WriteLine("CAD - Döviz Alış: " + helper.GetExchRate("CAD", ExchRateType.ForexBuying).ToString());
 
             Console.ReadLine();
         }
