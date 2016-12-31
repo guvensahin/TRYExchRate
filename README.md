@@ -12,7 +12,7 @@ T.C. Merkez Bankası tarafından yayınlanan döviz kurlarını almak için yaz�
 ## Nasıl Kullanılır ?
 Projeyi indirdiğinizde "TRYExchRate/src/TRYExchRate/TRYExchRate.cs" adresinde yer alan sınıfı kendi projenize dahil ettikten sonra aşağıdaki gibi çalıştırabilirsiniz.
 
-```
+```cs
 TRYExchRate helper = new TRYExchRate(new DateTime(2016,12,30));
 helper.LoadExchRate();
 
