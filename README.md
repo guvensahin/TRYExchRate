@@ -23,4 +23,9 @@ decimal usdExhRate = exchRateHelper.GetExchRate("USD", ExchRateType.ForexBuying)
 decimal eurExhRate = exchRateHelper.GetExchRate("EUR", ExchRateType.ForexSelling);
 ```
 
-Projenin içinde sınıfın detaylı kullanımının gösterildiği örnek "Console Application" projesi bulunuyor.
+## Örnek
+Projenin içinde sınıfın detaylı kullanımının gösterildiği örnek "Console Application" projesi bulunuyor. İndirdiğiniz projeyi visual studio ile açıp direkt run edebilirsiniz.
+
+Örnek ekran görüntüsü:
+
+![sample](http://guvensahin.com/wp-content/uploads/2016/12/TRYExchRateSample.png)
