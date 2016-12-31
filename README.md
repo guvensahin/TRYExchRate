@@ -1,5 +1,5 @@
 # guvensahin/TRYExchRate
-T.C. Merkez Bankası Kur Kütüphanesi
+T.C. Merkez Bankası Kur Kütüphanesi (C#)
 
 ## Nedir ?
 T.C. Merkez Bankası tarafından yayınlanan döviz kurlarını almak için yazılan bir C# kütüphanesidir.
