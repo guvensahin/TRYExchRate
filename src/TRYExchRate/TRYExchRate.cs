@@ -104,14 +104,25 @@ namespace TRYExchRate
 
                     break;
                 }
-                // 404 not found
                 catch (WebException ex)
                 {
-                    HttpWebResponse errorResponse = ex.Response as HttpWebResponse;
-                    if (errorResponse.StatusCode == HttpStatusCode.NotFound)
+                    if (ex.Response != null)
                     {
-                        // bir gün öncesi kontrol edilir
-                        ActualCurrencyDate = ActualCurrencyDate.AddDays(-1);
+                        // 404 not found
+                        HttpWebResponse errorResponse = ex.Response as HttpWebResponse;
+                        if (errorResponse.StatusCode == HttpStatusCode.NotFound)
+                        {
+                            // bir gün öncesi kontrol edilir
+                            ActualCurrencyDate = ActualCurrencyDate.AddDays(-1);
+                        }
+                        else
+                        {
+                            throw new Exception("Kur bilgisi bulunamadı.");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Kur bilgisi bulunamadı.");
                     }
                 }
             }
