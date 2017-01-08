@@ -2,7 +2,7 @@
 T.C. Merkez Bankası Kur Kütüphanesi (C#)
 
 ## Nedir ?
-T.C. Merkez Bankası tarafından yayınlanan döviz kurlarını almak için yazılan bir C# kütüphanesidir.
+T.C. Merkez Bankası (TCMB) tarafından yayınlanan döviz kurlarını almak için yazılan bir C# kütüphanesidir.
 
 ## Neler Yapabiliyor ?
 - Bu kütüphane ile belirttiğiniz tarihe ait döviz kurlarını çekebilirsiniz.
