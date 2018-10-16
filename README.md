@@ -1,4 +1,4 @@
-# guvensahin/TRYExchRate
+# TRYExchRate
 T.C. Merkez Bankası Kur Kütüphanesi (C#)
 
 ## Nedir ?
